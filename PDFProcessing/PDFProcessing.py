@@ -5,6 +5,6 @@ files = sys.argv[1:]
 
 merger = PyPDF4.PdfFileMerger()
 for file in files:
-    with open(file, 'rb') as filename:
-        merger.append(filename)
+    file = open(file, 'rb')
+    merger.append(file)
 merger.write('combined.pdf')
